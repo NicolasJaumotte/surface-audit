@@ -1,0 +1,10 @@
+HTTP/2 200
+date: Thu, 05 Nov 2026 10:00:00 GMT
+content-type: text/html; charset=utf-8
+server: nginx/1.18.0
+x-powered-by: PHP/7.4.3
+strict-transport-security: max-age=86400
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.exemple.invalid
+x-content-type-options: nosniff
+set-cookie: PHPSESSID=f1c7a; path=/; secure
+set-cookie: theme=sombre; path=/; Secure; SameSite=Lax
