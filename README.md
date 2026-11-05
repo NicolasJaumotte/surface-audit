@@ -1,7 +1,7 @@
 # Surface
 
 [![tests](https://github.com/NicolasJaumotte/surface-audit/actions/workflows/tests.yml/badge.svg)](https://github.com/NicolasJaumotte/surface-audit/actions/workflows/tests.yml)
-![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB)
 ![Sans dépendance](https://img.shields.io/badge/d%C3%A9pendances-aucune-2ea44f)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-lightgrey)
 
@@ -21,7 +21,7 @@ python3 surface.py github.com                                  # un vrai domaine
 python3 surface.py github.com --format markdown > rapport.md   # rapport à partager
 ```
 
-Aucune installation : seulement la bibliothèque standard de Python 3.9+. Formats disponibles : `text`, `markdown`, `json`. Le code retour vaut `1` s’il y a au moins un point prioritaire, ce qui permet de brancher Surface dans une CI.
+Aucune installation : seulement la bibliothèque standard de Python 3.10+. Formats disponibles : `text`, `markdown`, `json`. Le code retour vaut `1` s’il y a au moins un point prioritaire, ce qui permet de brancher Surface dans une CI.
 
 ## Ce que Surface contrôle
 
@@ -50,7 +50,7 @@ Surface n’envoie qu’une requête GET (plus une vers `http://` pour tester la
 - `surface.py` — un seul fichier, découpé en quatre parties : modèle (`Response`, `Finding`), contrôles, collecte, rapports.
 - Chaque contrôle est une **fonction pure** `Response -> Finding` : facile à tester sans réseau et à étendre (ajouter une fonction à `CHECKS`).
 - Les redirections sont suivies à la main pour garder la chaîne complète dans le rapport.
-- `tests/` — 21 tests `unittest` hors ligne, exécutés par GitHub Actions sur Python 3.9, 3.11 et 3.13.
+- `tests/` — 21 tests `unittest` hors ligne, exécutés par GitHub Actions sur Python 3.10, 3.12 et 3.14.
 
 ```sh
 python3 -m unittest discover -s tests -v
